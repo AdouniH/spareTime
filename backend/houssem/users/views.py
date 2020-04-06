@@ -1,21 +1,11 @@
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from django.contrib.auth.models import User
-from rest_framework import status
-from users import models
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework.authtoken import views
+from users.code_doc.doc_user_serializers import Doc_token_post, Doc_token_post_response
 
 
-class TokenKey(APIView):
-    """
-    List all snippets, or create a new snippet.
-    """
-
-    def post(self, request, format=None):
-        # serializer = SnippetSerializer(data=request.data)
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        return Response({"test": "ok"}, status=status.HTTP_200_OK)
-
+obtain_auth_token_view = swagger_auto_schema(
+    method='post',
+    request_body=Doc_token_post,
+    operation_summary="Récuperation du token key",
+    responses={200: Doc_token_post_response(many=False)}
+)(views.obtain_auth_token)

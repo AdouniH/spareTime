@@ -6,9 +6,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from drf_yasg.utils import swagger_auto_schema
 from mails.code_doc.doc_mail_serializers import Doc_mail_get_request, Doc_mail_get_response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication, BasicAuthentication
 
 
 class MailView(APIView):
+    authentication_classes = [TokenAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(responses={200: Doc_mail_get_response(many=False)})
     def get(self, request, format=None):

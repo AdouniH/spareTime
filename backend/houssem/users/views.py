@@ -12,6 +12,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from users.serializers import ProfileSerializer, UserSerializer
 from rest_framework.authtoken.models import Token
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication, BasicAuthentication
 
 
 obtain_auth_token_view = swagger_auto_schema(
@@ -23,6 +25,8 @@ obtain_auth_token_view = swagger_auto_schema(
 
 
 class ProfileView(APIView):
+    authentication_classes = [TokenAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(responses={200: ProfileSerializer(many=True)})
     def get(self, request, format=None):

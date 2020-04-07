@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem/houssem" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem/users" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/houssem/mails" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

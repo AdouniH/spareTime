@@ -8,4 +8,4 @@ class Doc_token_post(serializers.Serializer):
 
 
 class Doc_token_post_response(serializers.Serializer):
-    username = serializers.CharField(required=True, max_length=100, help_text="le token")
+    token = serializers.CharField(required=True, max_length=100, help_text="le token")

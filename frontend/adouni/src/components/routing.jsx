@@ -7,13 +7,13 @@ import {
   Redirect
 } from "react-router-dom";
 import AuthPage from './auth_page.jsx'
-import {fakeAuth, a} from './functions/login.jsx'
+import {authenticate} from './functions/login.jsx'
 import './style/debug.css';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-      a() === true
+      authenticate() === true
       ? <Component {...props} />
       : <Redirect to='/authentification' />
   )} />
@@ -24,9 +24,7 @@ export default function Routes() {
     <Router>
         <div>
             <Switch>
-                <Route exact path="/authentification">
-                    <AuthPage />
-                </Route>
+                <Route exact path="/authentification" component={AuthPage}/>
                 <PrivateRoute path='/' component={Home} />
             </Switch>
         </div>

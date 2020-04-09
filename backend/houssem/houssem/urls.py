@@ -25,5 +25,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('user/', include('users.urls')),
-    path('mail/', include('mails.urls'))
+    path('mail/', include('mails.urls')),
+    path('rendezvous/', include('rendezvous.urls'))
 ]

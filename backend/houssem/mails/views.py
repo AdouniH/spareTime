@@ -11,8 +11,8 @@ from rest_framework.authentication import TokenAuthentication, BasicAuthenticati
 
 
 class MailView(APIView):
-    authentication_classes = [TokenAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    # authentication_classes = [TokenAuthentication, BasicAuthentication]
+    # permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(responses={200: Doc_mail_get_response(many=False)})
     def get(self, request, format=None):

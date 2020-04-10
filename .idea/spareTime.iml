@@ -6,8 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem/users" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/houssem/mails" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/houssem/rendezvous" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (Repo2020)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

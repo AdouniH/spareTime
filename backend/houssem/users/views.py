@@ -5,7 +5,8 @@ from users.code_doc.doc_user_serializers \
     Doc_token_post, \
     Doc_token_post_response, \
     Doc_code_request, \
-    Doc_profil_post
+    Doc_profil_post, \
+    Doc_check_user_response
 from users.models import Profile
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -14,6 +15,7 @@ from users.serializers import ProfileSerializer, UserSerializer
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication, BasicAuthentication
+from django.contrib.auth.models import User
 
 
 obtain_auth_token_view = swagger_auto_schema(
@@ -49,7 +51,8 @@ class ProfileView(APIView):
         serializer_user = UserSerializer(data=request.data)
 
         if serializer_user.is_valid():
-            user = serializer_user.save()
+            user = User.objects.create_user(username=request.data["username"], password=request.data["password"])
+            user.save()
 
             profile = Profile(user=user, code=request.data["code"])
             profile.save()
@@ -76,3 +79,18 @@ class PtokenView(APIView):
         user = profile_object.user
         a, b = Token.objects.get_or_create(user=user)
         return Response({'token': a.key}, status=status.HTTP_200_OK)
+
+
+class CheckTokenView(APIView):
+    authentication_classes = [TokenAuthentication, BasicAuthentication]
+    permission_classes = ()
+    @swagger_auto_schema(responses={200: Doc_check_user_response(many=False)})
+    def get(self, request, format=None):
+        """
+        Check if profile exists
+
+        ---
+        """
+        user_exsists = request.user is not None
+
+        return Response({'user_exists': user_exsists}, status=status.HTTP_200_OK)

@@ -3,21 +3,22 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
-import AuthPage from './auth_page.jsx'
-import {authenticate} from './functions/login.jsx'
+import AuthPage from './auth_page.jsx';
 import './style/debug.css';
 
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
-      authenticate() === true
-      ? <Component {...props} />
-      : <Redirect to='/authentification' />
-  )} />
-)
+const PrivateRoute = ({component: Component, ...rest}) => {
+    var token = localStorage.getItem('token');
+    return (
+        <Route {...rest} render={props => (
+              token != null?
+              <Component {...props} />
+            : <Redirect to="/authentification" />
+        )} />
+    );
+};
 
 export default function Routes() {
   return (
@@ -32,10 +33,15 @@ export default function Routes() {
   );
 }
 
-function Home() {
+function Home(props) {
+  const disconnect = () => {
+      localStorage.removeItem('token');
+      props.history.push('/');
+  }
   return (
-    <div className="debugbounding">
-      <h2>Home</h2>
-    </div>
+      <div className="debugbounding">
+        <h2>Home</h2>
+          <button onClick={disconnect}>disconnect</button>
+      </div>
   );
 }

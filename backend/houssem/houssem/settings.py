@@ -132,5 +132,5 @@ STATIC_ROOT = '/home/work/spareTime/backend/houssem/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'http://51.178.84.176:8082',
 )

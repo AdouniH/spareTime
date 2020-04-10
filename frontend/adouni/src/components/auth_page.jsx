@@ -16,7 +16,7 @@ function AuthPage(props) {
   function checkUser(event){
       event.preventDefault();
 
-      axios.post('http://localhost:8000/user/ptoken/', {"code": codepass})
+      axios.post('http://51.178.84.176:8082/user/ptoken/', {"code": codepass})
         .then(res => {
             if (res.status === 200){
                 localStorage.setItem('token', res.data.token);

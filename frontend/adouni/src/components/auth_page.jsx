@@ -17,7 +17,7 @@ function AuthPage(props) {
 
   function submition(event){
       event.preventDefault();
-      axios.post('http://localhost:8000/user/ptoken/', {code: code})
+      axios.post('http://51.178.84.176:8081/user/ptoken/', {code: code})
           .then(res => {
             if (res.data.token){
               localStorage.setItem('token', res.data.token);

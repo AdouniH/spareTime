@@ -13,7 +13,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
     useEffect(() => {
       if (conn){
             var key = localStorage.getItem('token');
-            axios.get("http://localhost:8000/user/checktoken/",  { headers: { Authorization: 'token '+ key }})
+            axios.get("http://51.178.84.176:8081/user/checktoken/",  { headers: { Authorization: 'token '+ key }})
               .then(res => {
                         console.log(res.status)
                   })

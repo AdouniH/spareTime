@@ -11,13 +11,13 @@ from rest_framework.authentication import TokenAuthentication, BasicAuthenticati
 
 
 class MailView(APIView):
-    # authentication_classes = [TokenAuthentication, BasicAuthentication]
-    # permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     @swagger_auto_schema(responses={200: Doc_mail_get_response(many=False)})
     def get(self, request, format=None):
         """
-        Récupérer les mails
+        Get emails
 
         ---
         """
@@ -29,7 +29,7 @@ class MailView(APIView):
     @swagger_auto_schema(request_body=Doc_mail_get_request, responses={200: Doc_mail_get_response(many=False)})
     def post(self, request, format=None):
         """
-        Créer un nouveau mail
+        Set new email
 
         ---
         Si le mail existe déja alors le rajout ne sera pas permis

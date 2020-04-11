@@ -5,9 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import AuthPage from './auth_page.jsx';
-import Home from './home.jsx'
+import Email from './email.jsx'
 import {PrivateRoute} from '../utils.jsx'
-
 
 
 export default function Routes(props) {
@@ -15,7 +14,7 @@ export default function Routes(props) {
     <Router>
         <Switch>
             <Route exact path="/authentification" component={AuthPage}/>
-            <PrivateRoute path='/' component={Home} />
+            <PrivateRoute path='/' component={Email} />
         </Switch>
     </Router>
   );

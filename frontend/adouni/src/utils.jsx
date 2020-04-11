@@ -6,14 +6,14 @@ import {
 import {CnxContext} from './App.js'
 import axios from 'axios';
 
-
+const server_ip = "http://51.178.84.176:8081"
 // authentification
 const PrivateRoute = ({component: Component, ...rest}) => {
     const { conn, dispatch } = useContext(CnxContext);
     useEffect(() => {
       if (conn){
             var key = localStorage.getItem('token');
-            axios.get("http://51.178.84.176:8081/user/checktoken/",  { headers: { Authorization: 'token '+ key }})
+            axios.get(server_ip+"/user/checktoken/",  { headers: { Authorization: 'token '+ key }})
               .then(res => {
                         console.log(res.status)
                   })
@@ -33,4 +33,4 @@ const PrivateRoute = ({component: Component, ...rest}) => {
     );
 };
 
-export {PrivateRoute}
+export {PrivateRoute, server_ip}

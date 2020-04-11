@@ -2,6 +2,12 @@ import React,  {useState, useContext} from 'react';
 import './style/debug.css';
 import axios from 'axios';
 import {CnxContext} from '../App.js';
+import {server_ip} from '../utils.jsx'
+
+function ErrorMsg(){
+    return(<div className="debugbounding">ERROR</div>)
+}
+
 
 function AuthPage(props) {
 
@@ -12,30 +18,34 @@ function AuthPage(props) {
 
   var errortext;
   if(error){
-      errortext = <p> code invalide </p>
+      errortext = <ErrorMsg/>
   }
 
   function submition(event){
       event.preventDefault();
-      axios.post('http://51.178.84.176:8081/user/ptoken/', {code: code})
+      axios.post(server_ip+'/user/ptoken/', {code: code})
           .then(res => {
             if (res.data.token){
-              localStorage.setItem('token', res.data.token);
-              dispatch("connect");
+              dispatch({type: "connect", key: res.data.token});
               props.history.push("/");
             }
         })
-          .catch( error => { setError(true)})
+          .catch( error => {
+                setError(true);
+            })
       }
 
   return (
-      <div className="debugbounding">
-          <form onSubmit={submition}>
-              <p>Enter your code:</p>
-              <input type='text' name='code' onChange={(event) => {setCode(event.target.value)}}/>
-              <input type='submit' />
+      <div>
+
+          <div className="debugbounding">
+              <form onSubmit={submition}>
+                  <p>Enter your code:</p>
+                  <input type='text' name='code' onChange={(event) => {setCode(event.target.value)}}/>
+                  <input type='submit' />
+              </form>
               {errortext}
-          </form>
+          </div>
       </div>
   );
 }

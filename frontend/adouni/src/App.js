@@ -1,25 +1,15 @@
 import React, {useReducer} from 'react';
 import './App.css';
 import Routes from './components/routing.jsx'
+import {loginReducer} from './reducers.jsx'
 
 
 export const CnxContext = React.createContext();
-
-
-const initialState = localStorage.getItem('token');
-const reducer = (state, action) => {
-    switch (action) {
-        case 'connect': return true;
-        case 'disconnect':
-            localStorage.removeItem('token');
-            return false;
-        default: throw new Error('Unexpected action');
-  }
-};
+const liginItialState = localStorage.getItem('token');
 
 
 function App() {
-  const [conn, dispatch] = useReducer(reducer, initialState);
+  const [conn, dispatch] = useReducer(loginReducer, liginItialState);
   return (
     <div>
         <CnxContext.Provider value={{ conn, dispatch }}>

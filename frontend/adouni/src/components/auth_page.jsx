@@ -1,42 +1,42 @@
-import React,  {useState, useEffect} from 'react';
+import React,  {useState, useContext} from 'react';
 import './style/debug.css';
 import axios from 'axios';
-
+import {CnxContext} from '../App.js';
 
 function AuthPage(props) {
-    const [connected, setconnection] = useState(false);
-    const [codepass, setCodepass] = useState("");
 
-    useEffect(() => {
-        if (connected){
-            props.history.push('/');
-        }
-    });
+  const {conn, dispatch } = useContext(CnxContext);
 
-  function checkUser(event){
+  const [code, setCode] = useState("");
+  const [error, setError] = useState(false);
+
+  var errortext;
+  if(error){
+      errortext = <p> code invalide </p>
+  }
+
+  function submition(event){
       event.preventDefault();
-
-      axios.post('http://51.178.84.176:8081/user/ptoken/', {"code": codepass})
-        .then(res => {
-            if (res.status === 200){
-                localStorage.setItem('token', res.data.token);
-                setconnection(res.data.token);
+      axios.post('http://localhost:8000/user/ptoken/', {code: code})
+          .then(res => {
+            if (res.data.token){
+              localStorage.setItem('token', res.data.token);
+              dispatch("connect");
+              props.history.push("/");
             }
-              }
-        )
-  }
-
-  function updateCode(event){
-      setCodepass(event.target.value);
-  }
+        })
+          .catch( error => { setError(true)})
+      }
 
   return (
-    <div className="debugbounding">
-        <form onSubmit={checkUser}>
-            Veuillez entrez votre code : <input type='text' onChange={updateCode}/>
-            <input type='submit'/>
-        </form>
-    </div>
+      <div className="debugbounding">
+          <form onSubmit={submition}>
+              <p>Enter your code:</p>
+              <input type='text' name='code' onChange={(event) => {setCode(event.target.value)}}/>
+              <input type='submit' />
+              {errortext}
+          </form>
+      </div>
   );
 }
 

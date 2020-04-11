@@ -2,46 +2,21 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route
 } from "react-router-dom";
 import AuthPage from './auth_page.jsx';
-import './style/debug.css';
+import Home from './home.jsx'
+import {PrivateRoute} from '../utils.jsx'
 
 
-const PrivateRoute = ({component: Component, ...rest}) => {
-    var token = localStorage.getItem('token');
-    return (
-        <Route {...rest} render={props => (
-              token != null?
-              <Component {...props} />
-            : <Redirect to="/authentification" />
-        )} />
-    );
-};
 
-export default function Routes() {
+export default function Routes(props) {
   return (
     <Router>
-        <div>
-            <Switch>
-                <Route exact path="/authentification" component={AuthPage}/>
-                <PrivateRoute path='/' component={Home} />
-            </Switch>
-        </div>
+        <Switch>
+            <Route exact path="/authentification" component={AuthPage}/>
+            <PrivateRoute path='/' component={Home} />
+        </Switch>
     </Router>
-  );
-}
-
-function Home(props) {
-  const disconnect = () => {
-      localStorage.removeItem('token');
-      props.history.push('/');
-  }
-  return (
-      <div className="debugbounding">
-        <h2>Home</h2>
-          <button onClick={disconnect}>disconnect</button>
-      </div>
   );
 }

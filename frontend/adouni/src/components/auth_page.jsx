@@ -1,5 +1,6 @@
 import React,  {useState, useContext} from 'react';
 import './style/debug.css';
+import './style/auth_page.css';
 import axios from 'axios';
 import {CnxContext} from '../App.js';
 import {server_ip} from '../utils.jsx'
@@ -10,6 +11,7 @@ function ErrorMsg(){
 
 
 function AuthPage(props) {
+  document.body.classList.add('cover');
 
   const {conn, dispatch } = useContext(CnxContext);
 
@@ -37,7 +39,6 @@ function AuthPage(props) {
 
   return (
       <div>
-
           <div className="debugbounding">
               <form onSubmit={submition}>
                   <p>Enter your code:</p>

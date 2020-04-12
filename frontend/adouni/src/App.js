@@ -9,7 +9,9 @@ const liginItialState = localStorage.getItem('token');
 
 
 function App() {
+  document.title = "Houssem ADOUNI"
   const [conn, dispatch] = useReducer(loginReducer, liginItialState);
+
   return (
     <div>
         <CnxContext.Provider value={{ conn, dispatch }}>

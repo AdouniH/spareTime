@@ -13,6 +13,7 @@ h2 {
 h3 {
   margin: 0px;
 }
+
 html, body {
   width: 100%;
   height: 100%;
@@ -27,6 +28,7 @@ html, body {
   background-color: transparent;
   transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transform-style: preserve-3d;
+  position: absolute;
 }
 .gwd-page-wrapper {
   background-color: rgb(255, 255, 255);
@@ -34,52 +36,163 @@ html, body {
   transform: translateZ(0px);
 }
 .gwd-page-size {
-  width: 300px;
-  height: 250px;
-  margin-left: auto;
-    margin-right: auto;
-}
-.gwd-image-2734 {
-  position: absolute;
-  left: 0%;
-  top: 0%;
   width: 100%;
   height: 100%;
-  background-image: none;
-  background-color: rgb(88, 188, 46);
-  border-style: solid;
-  border-radius: 1px;
-  border-width: 0px;
 }
-.gwd-label-1wfl {
+.gwd-span-ojfr {
   position: absolute;
-  top: 18%;
-  height: 54px;
-  border-style: none;
-  font-family: "Arial Black";
-  width: 238px;
-  left: 10%;
+  width: 154px;
+  height: 29px;
+  transform-origin: 77px 14.5px 0px;
+  font-family: "Times New Roman";
+  left: 50%;
+  transform: translate3d(-77px, 0px, 0px);
+  transform-style: preserve-3d;
+  top: 41px;
 }
-.gwd-input-bdmc {
+.gwd-input-1c6z {
   position: absolute;
-  height: 9%;
-  width: 79%;
-  top: 42%;
-  left: 10%;
+  width: 190px;
+  transform-style: preserve-3d;
+  height: 23px;
+  top: 50%;
+  left: 66.6667%;
+  transform: translate3d(-122px, 25px, 0px);
 }
-.gwd-button-1q3m {
-  position: absolute;
-  height: 11%;
-  width: 82%;
-  left: 10%;
-  top: 66%;
-  border-width: 2px;
-}
-.gwd-div-ohk9 {
-  height: 100%;
+.gwd-div-lj6m {
   width: 100%;
 }
-.gwd-page-1ra8 {
-  height: 100%;
+.gwd-page-1h36 {
   width: 100%;
 }
+.gwd-div-f2v2 {
+  position: absolute;
+  width: 346px;
+  height: 0px;
+  top: 98px;
+  transform-style: preserve-3d;
+  left: 50%;
+  transform: translate3d(-172px, -28px, 0px);
+}
+.gwd-button-1heg {
+  position: absolute;
+  width: 227.75px;
+  height: 30px;
+  top: 104px;
+  left: 74.9142px;
+  border-image-source: none;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-color: rgb(132, 77, 24);
+  border-style: outset;
+}
+.gwd-path-1fmm {
+  position: absolute;
+  fill: rgb(255, 255, 255);
+  stroke: rgb(0, 0, 0);
+  stroke-width: 1px;
+  height: 267.285px;
+  width: 364.96px;
+  left: -98.5831px;
+  top: -38.4472px;
+}
+.gwd-label-126h {
+  position: absolute;
+  height: 20px;
+  transform-style: preserve-3d;
+  transform: translate3d(24px, -14px, 0px);
+  left: 28px;
+  width: 52px;
+  top: 43px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gwd1-lightbox {
+      overflow: hidden;
+    }
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    .gwd1-page-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .gwd1-page-content {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+      position: absolute;
+    }
+    .gwd1-page-wrapper {
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      transform: translateZ(0px);
+    }
+    .gwd1-page-size {
+      width: 100%;
+      height: 30px;
+    }
+    .gwd1-div-1nhp {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0%;
+      top: 0%;
+    }
+    .gwd1-page-eleh {
+      background-image: none;
+      background-color: rgb(234, 151, 96);
+    }
+    .gwd1-label-62ru {
+      position: absolute;
+      height: 26px;
+      transform-origin: 55.75px 13px 0px;
+      left: 50%;
+      transform-style: preserve-3d;
+      top: 50%;
+      width: 119px;
+      transform: translate3d(-65px, -13px, 0px);
+    }

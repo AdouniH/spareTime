@@ -6,8 +6,8 @@ import {
 import {CnxContext} from './App.js'
 import axios from 'axios';
 
-// const server_ip = "https://houssem-adouni.com:8081"
-const server_ip = "http://localhost:8000"
+const server_ip = "https://houssem-adouni.com:8081"
+// const server_ip = "http://localhost:8000"
 // authentification
 const PrivateRoute = ({component: Component, ...rest}) => {
     const { conn, dispatch } = useContext(CnxContext);

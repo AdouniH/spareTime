@@ -6,7 +6,8 @@ import {
 import {CnxContext} from './App.js'
 import axios from 'axios';
 
-const server_ip = "https://houssem-adouni.com:8081"
+// const server_ip = "https://houssem-adouni.com:8081"
+const server_ip = "http://localhost:8000"
 // authentification
 const PrivateRoute = ({component: Component, ...rest}) => {
     const { conn, dispatch } = useContext(CnxContext);
@@ -14,9 +15,6 @@ const PrivateRoute = ({component: Component, ...rest}) => {
       if (conn){
             var key = localStorage.getItem('token');
             axios.get(server_ip+"/user/checktoken/",  { headers: { Authorization: 'token '+ key }})
-              .then(res => {
-                        console.log(res.status)
-                  })
                   .catch(function (error) {
                         localStorage.removeItem('token');
                         dispatch('disconnect')

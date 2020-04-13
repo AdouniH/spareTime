@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {CnxContext} from '../../App.js'
+import {Link} from "react-router-dom";
 
 
 function NavBar(props) {
@@ -8,8 +9,17 @@ function NavBar(props) {
       <div>
           <div className="debugbounding">
               <ul>
-                  <li onClick={() => {dispatch({type: "disconnect"})}}> <a href="">disconnect</a></li>
+                  <li onClick={() => {dispatch({type: "disconnect"})}}>
+                      <Link to="/">disconnect</Link>
+                  </li>
+                  <li>
+                    <Link to="/rendezvous">Rdv</Link>
+                  </li>
+                  <li>
+                    <Link to="/mail">mail</Link>
+                  </li>
               </ul>
+
           </div>
       </div>
   );

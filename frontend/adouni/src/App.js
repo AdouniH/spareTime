@@ -2,7 +2,9 @@ import React, {useReducer} from 'react';
 import './App.css';
 import Routes from './components/routing.jsx'
 import {loginReducer} from './reducers.jsx'
-
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 export const CnxContext = React.createContext();
 const liginItialState = localStorage.getItem('token');
@@ -14,9 +16,16 @@ function App() {
 
   return (
     <div>
-        <CnxContext.Provider value={{ conn, dispatch }}>
-            <Routes />
-        </CnxContext.Provider>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <Router>
+            <CnxContext.Provider value={{ conn, dispatch }}>
+                <Routes />
+            </CnxContext.Provider>
+        </Router>
     </div>
   );
 }

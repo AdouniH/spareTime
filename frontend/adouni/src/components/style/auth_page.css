@@ -1,8 +1,85 @@
-.centerizeText{
-  text-align: center;
-  background-color: grey;
+.gwd-lightbox {
+  overflow: hidden;
 }
-
-.a{
-  background-color: blue;
+p {
+  margin: 0px;
+}
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+.gwd-page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gwd-page-content {
+  background-color: transparent;
+  transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-style: preserve-3d;
+}
+.gwd-page-wrapper {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  transform: translateZ(0px);
+}
+.gwd-page-size {
+  width: 300px;
+  height: 250px;
+  margin-left: auto;
+    margin-right: auto;
+}
+.gwd-image-2734 {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: none;
+  background-color: rgb(88, 188, 46);
+  border-style: solid;
+  border-radius: 1px;
+  border-width: 0px;
+}
+.gwd-label-1wfl {
+  position: absolute;
+  top: 18%;
+  height: 54px;
+  border-style: none;
+  font-family: "Arial Black";
+  width: 238px;
+  left: 10%;
+}
+.gwd-input-bdmc {
+  position: absolute;
+  height: 9%;
+  width: 79%;
+  top: 42%;
+  left: 10%;
+}
+.gwd-button-1q3m {
+  position: absolute;
+  height: 11%;
+  width: 82%;
+  left: 10%;
+  top: 66%;
+  border-width: 2px;
+}
+.gwd-div-ohk9 {
+  height: 100%;
+  width: 100%;
+}
+.gwd-page-1ra8 {
+  height: 100%;
+  width: 100%;
 }

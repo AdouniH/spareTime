@@ -44,17 +44,21 @@ function AuthPage(props) {
 
   return (
     <div>
-HELLO
-        <div></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <div className="spacer"></div>
         <div>
-        <div>
+        <div class="centrallogin">
 
             <form onSubmit={submition}>
-                <div><span >Veuillez entrer votre code</span></div>
-                <div><input onChange={(event) => {setCode(event.target.value); setError(false)}}></input></div>
-                <div><button type="submit">Login</button></div>
+                <div class="logintext"><span >Veuillez entrer votre code</span></div>
+                <div class="logininput"><input class="in" onChange={(event) => {setCode(event.target.value); setError(false)}}></input></div>
+                <div class="loginbutton"><button class="in enjoy-css" type="submit">Login</button></div>
             </form>
-            <div>{errortext}</div>
+            <div className="errortext">{errortext}</div>
         </div>
         </div>
     </div>

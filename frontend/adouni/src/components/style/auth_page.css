@@ -58,3 +58,11 @@
 .spacer{
   height: 25px;
 }
+
+.background-body{
+  margin:0;
+  padding:0;
+  background: url('../../static/cover.png') no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}

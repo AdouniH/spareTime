@@ -4,6 +4,7 @@ import './style/debug.css';
 import Navbar from './globals/navbar.jsx'
 
 function Rdv(props) {
+  document.body.classList.remove('background-body');
   return (
     <div>
         <Navbar />

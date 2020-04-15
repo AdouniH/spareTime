@@ -25,6 +25,7 @@ function EmailNonValid(props) {
 
 
 function Email(props) {
+  document.body.classList.remove('background-body');
   const {conn, dispatch} = useContext(CnxContext);
   const [email, setEmail] = useState("")
   const [email_sent_status, setEmail_sent_status] = useState(0)

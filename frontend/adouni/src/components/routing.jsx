@@ -12,6 +12,7 @@ import {PrivateRoute} from '../utils.jsx'
 
 
 export default function Routes(props) {
+  // document.body.classList.remove('background-body');
   return (
         <Switch>
             <Route exact path="/authentification" component={AuthPage}/>

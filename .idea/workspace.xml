@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cca1407-b293-4bbc-a056-18522b63b144" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/adouni/src/utils.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/adouni/src/utils.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/houssem/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/houssem/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +16,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/houssem/mails/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
+            <state relative-caret-position="578">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#1#30#0" expanded="true" />
@@ -25,11 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/houssem/houssem/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="479">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/houssem/users/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -70,13 +79,13 @@
         <option value="$PROJECT_DIR$/backend/houssem/users/serializers.py" />
         <option value="$PROJECT_DIR$/backend/houssem/users/models.py" />
         <option value="$PROJECT_DIR$/backend/houssem/users/code_doc/doc_user_serializers.py" />
-        <option value="$PROJECT_DIR$/backend/houssem/users/views.py" />
         <option value="$PROJECT_DIR$/backend/brouillon/hello.js" />
         <option value="$PROJECT_DIR$/backend/brouillon/hello.html" />
         <option value="$PROJECT_DIR$/brouillon/hello.js" />
         <option value="$PROJECT_DIR$/brouillon/hello.html" />
         <option value="$PROJECT_DIR$/backend/houssem/houssem/settings.py" />
         <option value="$PROJECT_DIR$/backend/houssem/mails/views.py" />
+        <option value="$PROJECT_DIR$/backend/houssem/users/views.py" />
       </list>
     </option>
   </component>
@@ -90,7 +99,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,12 +129,13 @@
               <item name="spareTime" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="houssem" type="462c0819:PsiDirectoryNode" />
-              <item name="mails" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,16 +543,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/houssem/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/houssem/mails/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
+        <state relative-caret-position="578">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#1#30#0" expanded="true" />
@@ -554,7 +556,14 @@
     <entry file="file://$PROJECT_DIR$/backend/houssem/houssem/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/houssem/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
         </state>
       </provider>
     </entry>

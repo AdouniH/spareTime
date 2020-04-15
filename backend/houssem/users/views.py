@@ -78,7 +78,10 @@ class PtokenView(APIView):
         profile_object = objects[0]
         user = profile_object.user
         a, b = Token.objects.get_or_create(user=user)
-        return Response({'token': a.key}, status=status.HTTP_200_OK)
+        r = Response({'token': a.key}, status=status.HTTP_200_OK)
+
+        r["Access-Control-Allow-Origin"] = "*"
+        return r
 
 
 class CheckTokenView(APIView):
@@ -93,4 +96,6 @@ class CheckTokenView(APIView):
         """
         user_exsists = request.user is not None
 
-        return Response({'user_exists': user_exsists}, status=status.HTTP_200_OK)
+        r = Response({'user_exists': user_exsists}, status=status.HTTP_200_OK)
+        r["Access-Control-Allow-Origin"] = "*"
+        return r

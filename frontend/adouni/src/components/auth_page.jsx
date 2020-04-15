@@ -44,17 +44,17 @@ function AuthPage(props) {
 
   return (
     <div>
-HEKLLO
-        <div className="spacer"></div>
+HELLO
+        <div></div>
         <div>
-        <div class="centrallogin">
+        <div>
 
             <form onSubmit={submition}>
-                <div class="logintext"><span >Veuillez entrer votre code</span></div>
-                <div class="logininput"><input class="in" onChange={(event) => {setCode(event.target.value); setError(false)}}></input></div>
-                <div class="loginbutton"><button class="in enjoy-css" type="submit">Login</button></div>
+                <div><span >Veuillez entrer votre code</span></div>
+                <div><input onChange={(event) => {setCode(event.target.value); setError(false)}}></input></div>
+                <div><button type="submit">Login</button></div>
             </form>
-            <div className="errortext">{errortext}</div>
+            <div>{errortext}</div>
         </div>
         </div>
     </div>

@@ -18,8 +18,6 @@ function ErrorMsg(){
 
 function AuthPage(props) {
   document.body.classList.add('background-body');
-
-
   const {conn, dispatch } = useContext(CnxContext);
 
   const [code, setCode] = useState("");
@@ -45,25 +43,21 @@ function AuthPage(props) {
       }
 
   return (
-    <div >
+    <div>
+        <div className="spacer"></div>
+        <div>
+        <div class="centrallogin">
 
-
-            <div class="spacer d-none d-sm-block"></div>
-            <div class="spacersm .d-block .d-sm-none"></div>
-            <div class="test centrize">
-                <div class="labelinput"><span>Veuillez entrer votre code</span></div>
-                <div class="next">
-                    <form onSubmit={submition}>
-
-                        <div class="in">
-                            <input class="all" onChange={(event) => {setCode(event.target.value)}}></input>
-                        </div>
-                        <div class="bottom"><button class="bouton-css" type="submit">Login</button></div>
-                    </form>
-                    <div class="errormsg">{errortext}</div>
-                </div>
-            </div>
+            <form onSubmit={submition}>
+                <div class="logintext"><span >Veuillez entrer votre code</span></div>
+                <div class="logininput"><input class="in" onChange={(event) => {setCode(event.target.value); setError(false)}}></input></div>
+                <div class="loginbutton"><button class="in enjoy-css" type="submit">Login</button></div>
+            </form>
+            <div className="errortext">{errortext}</div>
+        </div>
+        </div>
     </div>
+
   );
 }
 

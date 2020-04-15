@@ -17,7 +17,7 @@ function ErrorMsg(){
 
 
 function AuthPage(props) {
-  document.body.classList.add('background-body');
+  // document.body.classList.add('background-body');
   const {conn, dispatch } = useContext(CnxContext);
 
   const [code, setCode] = useState("");

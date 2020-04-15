@@ -10,7 +10,7 @@ import cover from './cover.jpg'
 function ErrorMsg(){
     return(
       <div>
-          <label class="red_color">Code incorrecte !&nbsp;</label>
+          <label class="red_color">Code incorrect !&nbsp;</label>
       </div>
   )
 }

@@ -4,12 +4,14 @@
   width: 350px;
   margin: auto;
   border-radius: 12px;
-  background-color: #D0E1D0;
+  /* background-color: #D0E1D0; */
+  background-color:rgba(0, 0, 0, 0.3);
 }
 
 .logintext{
   /* margin-top: 10px; */
   text-align: center;
+  color: white;
 }
 
 .logininput{
@@ -32,14 +34,14 @@
   display: inline-block;
   cursor: pointer;
   padding: 10px 20px;
-  border: 1px solid #018dc4;
+  border: 1px solid grey;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font: normal 16px/normal "Times New Roman", Times, serif;
   color: rgba(255,255,255,0.9);
   -o-text-overflow: clip;
   text-overflow: clip;
-  background: #0199d9;
+  background: black;
   -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
   text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
@@ -52,7 +54,10 @@
 
 .errortext{
   text-align: center;
-  color: red;
+  color: #481515;
+  font-size: 15px;
+  font-weight: bold;
+
 }
 
 .spacer{
@@ -62,7 +67,7 @@
 .background-body{
   margin:0;
   padding:0;
-  background: url('../../static/cover.png') no-repeat center fixed;
+  background: url('../../static/cover.jpg') no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
 }

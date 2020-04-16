@@ -11,8 +11,8 @@ function NavBar(props) {
 
 
   return (
-      <div>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="ok">
+        <nav class="navbar navbar-expand-md navbar-dark">
           <Link class="navbar-brand" to="/">Houssem ADOUNI</Link>
           <button  onClick={managetog} class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
@@ -20,14 +20,8 @@ function NavBar(props) {
           <div class={tog + " navbar-collapse test"} id="collapsibleNavbar">
               <div>
                     <ul class="navblock navbar-nav">
-                          <li class="left nav-item">
-                            <Link class="nav-link" to="/rendezvous">Rdv</Link>
-                          </li>
-                          <li class="left nav-item">
-                            <Link class="nav-link" to="/mail">mail</Link>
-                          </li>
                           <li class="left nav-item" onClick={() => {dispatch({type: "disconnect"})}}>
-                              <Link class="nav-link" to="/">disconnect</Link>
+                              <Link class="nav-link" to="/">Déconnexion</Link>
                           </li>
                     </ul>
               </div>

@@ -1,11 +1,11 @@
 import React,  {useState, useContext} from 'react';
 import './style/debug.css';
-import './style/auth_page.css';
 import axios from 'axios';
 import {CnxContext} from '../App.js';
 import {server_ip} from '../utils.jsx'
 import cover from './cover.jpg'
 import {Link} from "react-router-dom";
+import './style/auth_page.css';
 
 
 function ErrorMsg(){
@@ -18,6 +18,7 @@ function ErrorMsg(){
 
 
 function AuthPage(props) {
+  document.body.classList.remove('background-body-email');
   document.body.classList.add('background-body');
   const {conn, dispatch } = useContext(CnxContext);
 

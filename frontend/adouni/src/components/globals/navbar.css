@@ -11,3 +11,16 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.opac{
+  opacity: 0.5;
+}
+
+.opec{
+  opacity: 1;
+}
+.ok{
+background-color:rgba(0, 0, 0, 0.3);
+
+  /* background-color:green; */
+}

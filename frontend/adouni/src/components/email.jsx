@@ -2,30 +2,32 @@ import React, {useState, useContext} from "react";
 import {CnxContext} from '../App.js'
 import NavBar from './globals/navbar.jsx'
 import {server_ip} from '../utils.jsx'
+import './style/email.css';
 import axios from 'axios';
 
 function EmailSent(props) {
     return(
-        <div className="debugbounding"> Email is sent go go go ...  </div>
+        <div  className="succestext"> Email enregistré avec succès  </div>
     )
 }
 
 
 function EmailExisteDeja(props) {
     return(
-        <div className="debugbounding"> Cet Email est déja présent dans ma base de données</div>
+        <div className="errortext"> Cet Email est déja présent dans ma base de données</div>
     )
 }
 
 function EmailNonValid(props) {
     return(
-        <div className="debugbounding"> Erreur ! email non sauvegardé</div>
+        <div className="errortext"> Erreur ! email non sauvegardé</div>
     )
 }
 
 
 function Email(props) {
   document.body.classList.remove('background-body');
+  document.body.classList.add('background-body-email');
   const {conn, dispatch} = useContext(CnxContext);
   const [email, setEmail] = useState("")
   const [email_sent_status, setEmail_sent_status] = useState(0)
@@ -61,13 +63,17 @@ function Email(props) {
   return (
       <div>
           <NavBar/>
-          <div className="debugbounding">
+
+          <div className="spacer"></div>
+          <div>
+          <div class="centrallogin">
               <form onSubmit={saveMail}>
-                  <p>Enter your email, and submit:</p>
-                  <input type='email' value={email} onChange={(event) => {setEmail(event.target.value); setEmail_sent_status(0);}}/>
-                  <input type='submit'/>
+                  <div class="logintext"><span >Veuillez saisir votre email</span></div>
+                  <div class="logininput"><input type="email" class="in" value={email} onChange={(event) => {setEmail(event.target.value); setEmail_sent_status(0);}}></input></div>
+                  <div class="loginbutton"><button class="in enjoy-css" type="submit">Enregistrer</button></div>
               </form>
-              {response}
+              <div>{response}</div>
+          </div>
           </div>
       </div>
   );

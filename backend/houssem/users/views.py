@@ -84,6 +84,7 @@ class PtokenView(APIView):
 class CheckTokenView(APIView):
     authentication_classes = [TokenAuthentication, BasicAuthentication]
     permission_classes = ()
+
     @swagger_auto_schema(responses={200: Doc_check_user_response(many=False)})
     def get(self, request, format=None):
         """

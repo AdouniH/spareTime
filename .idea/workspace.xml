@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cca1407-b293-4bbc-a056-18522b63b144" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/houssem/cloud/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/houssem/cloud/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/houssem/cloud/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/houssem/cloud/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brouillon/test_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/brouillon/test_01.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="173">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#1#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_01.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/brouillon/test_01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -112,10 +121,10 @@
         <option value="$PROJECT_DIR$/backend/houssem/cloud/serializers.py" />
         <option value="$PROJECT_DIR$/backend/houssem/cloud/admin.py" />
         <option value="$PROJECT_DIR$/backend/houssem/houssem/urls.py" />
-        <option value="$PROJECT_DIR$/brouillon/test_01.py" />
         <option value="$PROJECT_DIR$/backend/houssem/houssem/settings.py" />
         <option value="$PROJECT_DIR$/backend/houssem/cloud/urls.py" />
         <option value="$PROJECT_DIR$/backend/houssem/cloud/models.py" />
+        <option value="$PROJECT_DIR$/brouillon/test_01.py" />
         <option value="$PROJECT_DIR$/backend/houssem/cloud/views.py" />
       </list>
     </option>
@@ -147,13 +156,6 @@
               <item name="spareTime" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="houssem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spareTime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spareTime" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="houssem" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spareTime" type="b2602c69:ProjectViewProjectNode" />
@@ -231,12 +233,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24670571" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24670571" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -259,13 +261,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -579,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -613,10 +601,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/brouillon/test_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/houssem/cloud/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="173">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#1#35#0" expanded="true" />
           </folding>

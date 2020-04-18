@@ -13,7 +13,7 @@ function NavBar(props) {
   return (
       <div class="ok">
         <nav class="navbar navbar-expand-md navbar-dark">
-          <Link class="navbar-brand" to="/">Houssem ADOUNI</Link>
+          <Link class="navbar-brand" to="/"></Link>
           <button  onClick={managetog} class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
           </button>

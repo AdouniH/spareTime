@@ -20,7 +20,7 @@ function EmailExisteDeja(props) {
 
 function EmailNonValid(props) {
     return(
-        <div className="errortext"> Erreur ! email non sauvegardé</div>
+        <div className="errortext"> Erreur ! </div>
     )
 }
 

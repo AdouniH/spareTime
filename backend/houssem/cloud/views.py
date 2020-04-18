@@ -15,7 +15,7 @@ class CloudView(APIView):
 
         with open(path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/vnd.")
-            response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(path)
+            response['Content-Disposition'] = 'attachment; filename=' + file_object.name
             return response
 
 

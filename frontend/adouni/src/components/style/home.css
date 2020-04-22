@@ -1,0 +1,32 @@
+.h_back{
+  text-align: center;
+  height: 200px;
+  background: url("../../static/profileimage.jpg") no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+
+.h_backm{
+  text-align: center;
+  background: url("../../static/profileimage.jpg") no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+
+.pimg{
+  margin-top: 25px;
+  margin-left: 15px;
+  height: 150px;
+  border-radius: 35px;
+  box-shadow: 3px 6px black;
+
+}
+
+.center{
+  width: 180px;
+  margin: auto;
+}
+
+.mtop{
+  margin-top: 30px;
+}

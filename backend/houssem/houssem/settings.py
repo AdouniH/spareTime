@@ -134,6 +134,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/work/spareTime/backend/houssem/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = "C:/Users/Houssem Adouni/Documents/work/spareTime/backend/houssem/media/"
+MEDIA_ROOT = "C:/Users/Houssem Adouni/Documents/work/media/"
 
 

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'mails',
     'rendezvous',
     'cloud',
+    'proj',
     'corsheaders',
 ]
 

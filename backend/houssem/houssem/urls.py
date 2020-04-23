@@ -28,7 +28,9 @@ urlpatterns = [
     path('user/', include('users.urls')),
     path('mail/', include('mails.urls')),
     path('rendezvous/', include('rendezvous.urls')),
-    path('cloud/', include('cloud.urls'))
+    path('cloud/', include('cloud.urls')),
+    path('proj/', include('proj.urls'))
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

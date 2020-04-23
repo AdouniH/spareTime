@@ -27,4 +27,4 @@ def convert(epsg_from, epsg_to, x, y):
 
 
 if __name__ == "__main__":
-    print(convert(4326, 32628, 63.983, -19.700))
+    print(convert(4326, 4223, 63.983, -19.700))

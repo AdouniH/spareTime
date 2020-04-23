@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 function Proj() {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({e: 4223, s: 22391});
   const [result, setResult] = useState({})
 
   const claculer = (event) => {
@@ -17,9 +17,9 @@ function Proj() {
     <div class="debugbounding">
         <form onSubmit={claculer}>
             <p>EPSG en entrée</p>
-            <p><input name='e' value="4223" type='number' onChange={(event) => {setState({...state, e: event.target.value})}}/></p>
+            <p><input name='e' value={state.e} type='number' onChange={(event) => {setState({...state, e: event.target.value})}}/></p>
             <p>EPSG en sortie</p>
-            <p><input name='s' value="22391" type='number' onChange={(event) => {setState({...state, s: event.target.value})}}/></p>
+            <p><input name='s' value={state.s} type='number' onChange={(event) => {setState({...state, s: event.target.value})}}/></p>
             <p>X</p>
             <p><input name='x' type='text' onChange={(event) => {setState({...state, x: event.target.value})}}/></p>
             <p>Y</p>
